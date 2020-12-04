@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		1F8E8071257A4E2B00EE681C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E806F257A4E2B00EE681C /* Main.storyboard */; };
 		1F8E8073257A4E3100EE681C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E8072257A4E3100EE681C /* Assets.xcassets */; };
 		1F8E8076257A4E3100EE681C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E8074257A4E3100EE681C /* LaunchScreen.storyboard */; };
+		1F8E8080257A531900EE681C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1F8E807F257A531900EE681C /* SwiftPackageProductDependency */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F8E8080257A531900EE681C /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = benzin;
+			packageProductDependencies = (
+				1F8E807F257A531900EE681C /* SwiftPackageProductDependency */,
+			);
 			productName = benzin;
 			productReference = 1F8E8066257A4E2B00EE681C /* benzin.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +115,9 @@
 				Base,
 			);
 			mainGroup = 1F8E805D257A4E2B00EE681C;
+			packageReferences = (
+				1F8E807E257A531800EE681C /* RemoteSwiftPackageReference */,
+			);
 			productRefGroup = 1F8E8067257A4E2B00EE681C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -216,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -341,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F8E807E257A531800EE681C /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F8E807F257A531900EE681C /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F8E807E257A531800EE681C /* RemoteSwiftPackageReference */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F8E805E257A4E2B00EE681C /* Project object */;
 }
