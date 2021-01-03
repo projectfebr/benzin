@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ECP-mQ-UjU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" constant="190" id="2H5-Mi-39P"/>
                                     <constraint firstAttribute="height" constant="40" id="8S8-24-gId"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <state key="normal" title="Выбрать изображение">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -46,38 +46,216 @@
                                     <constraint firstAttribute="height" constant="40" id="DSf-lc-i2E"/>
                                     <constraint firstAttribute="width" constant="190" id="vPG-Rb-KFl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                <state key="normal" title="Удалить фон">
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <state key="normal" title="Удалить фон (benzin)">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="deleteBackground" destination="BYZ-38-t0r" eventType="touchUpInside" id="zzv-Zu-D4r"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMp-se-wCb">
+                                <rect key="frame" x="112" y="558" width="190" height="40"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hby-cF-KFr"/>
+                                    <constraint firstAttribute="width" constant="190" id="wmc-Xd-j2K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <state key="normal" title="Удалить фон (removebg)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteBackgroundRemoveBG" destination="BYZ-38-t0r" eventType="touchUpInside" id="afg-TJ-v8h"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcA-dX-Z3i">
+                                <rect key="frame" x="20" y="662" width="374" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="PRE-47-eUA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gne-5l-i05" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1pF-ZO-sgq"/>
+                            <constraint firstItem="xMp-se-wCb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Jq-eu-r0U"/>
                             <constraint firstItem="lX0-Fv-uk4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hD-r7-Zhz"/>
                             <constraint firstItem="lX0-Fv-uk4" firstAttribute="top" secondItem="OCr-Jk-gbw" secondAttribute="bottom" constant="20" id="3sg-Pq-xIF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hcA-dX-Z3i" secondAttribute="trailing" constant="20" id="A7c-wo-uBm"/>
+                            <constraint firstItem="hcA-dX-Z3i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DPy-Gc-3fk"/>
+                            <constraint firstItem="hcA-dX-Z3i" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="HrP-sx-XWY"/>
                             <constraint firstItem="gne-5l-i05" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TKm-sC-gTJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gne-5l-i05" secondAttribute="trailing" constant="20" id="ZUT-3D-HAU"/>
+                            <constraint firstItem="xMp-se-wCb" firstAttribute="top" secondItem="lX0-Fv-uk4" secondAttribute="bottom" constant="20" id="f0u-4u-7Bz"/>
                             <constraint firstItem="OCr-Jk-gbw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="szM-YY-LuP"/>
                             <constraint firstItem="OCr-Jk-gbw" firstAttribute="top" secondItem="gne-5l-i05" secondAttribute="bottom" constant="20" id="wiv-eh-Pb7"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hcA-dX-Z3i"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="chooseImageButton" destination="OCr-Jk-gbw" id="jvR-hI-e3D"/>
                         <outlet property="deleteBackgroundButton" destination="lX0-Fv-uk4" id="GIj-qL-tau"/>
+                        <outlet property="deleteBackgroundButton2" destination="xMp-se-wCb" id="pTq-Ag-3XC"/>
                         <outlet property="imageView" destination="gne-5l-i05" id="hFW-PF-rlH"/>
+                        <outlet property="responseLabel" destination="hcA-dX-Z3i" id="NFP-Vq-vTY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201.44927536231884" y="39.508928571428569"/>
+            <point key="canvasLocation" x="774" y="763"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bmd-R4-xdG">
+            <objects>
+                <viewController id="ECP-mQ-UjU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLv-dN-JhX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HKD-ZR-kuK" customClass="BorderedView" customModule="benzin" customModuleProvider="target">
+                                <rect key="frame" x="20" y="138" width="374" height="374"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfZ-xG-Rzr" customClass="ButtonView" customModule="benzin" customModuleProvider="target">
+                                        <rect key="frame" x="57.5" y="164.5" width="259.5" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="mfZ-xG-Rzr" secondAttribute="height" multiplier="173:30" id="Ci7-pb-m6p"/>
+                                            <constraint firstAttribute="height" constant="45" id="D1q-JO-j7X"/>
+                                        </constraints>
+                                        <state key="normal" title="Загрузить изображение">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" systemColor="systemOrangeColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="id9-qo-pZa">
+                                        <rect key="frame" x="115" y="217" width="144" height="32"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Загрузить по URL">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="mfZ-xG-Rzr" firstAttribute="centerX" secondItem="HKD-ZR-kuK" secondAttribute="centerX" id="MgO-EL-fe5"/>
+                                    <constraint firstAttribute="width" secondItem="HKD-ZR-kuK" secondAttribute="height" multiplier="1:1" id="ZLP-86-Mid"/>
+                                    <constraint firstItem="id9-qo-pZa" firstAttribute="centerX" secondItem="HKD-ZR-kuK" secondAttribute="centerX" id="rXY-yc-55y"/>
+                                    <constraint firstItem="mfZ-xG-Rzr" firstAttribute="centerY" secondItem="HKD-ZR-kuK" secondAttribute="centerY" id="tKt-Wl-m5M"/>
+                                    <constraint firstItem="id9-qo-pZa" firstAttribute="top" secondItem="mfZ-xG-Rzr" secondAttribute="bottom" constant="7.5" id="zS5-ti-uqG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemOrangeColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Используйте ваше изображение для удаления и редактирования фона" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssw-8e-eke">
+                                <rect key="frame" x="-20.5" y="94" width="455" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nt-uF-mz5">
+                                <rect key="frame" x="161" y="520" width="92" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Параметры">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nv4-GF-mOH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7nt-uF-mz5" firstAttribute="top" secondItem="HKD-ZR-kuK" secondAttribute="bottom" constant="8" symbolic="YES" id="5z6-HO-9ke"/>
+                            <constraint firstItem="7nt-uF-mz5" firstAttribute="centerX" secondItem="uLv-dN-JhX" secondAttribute="centerX" id="7Ly-kr-Ats"/>
+                            <constraint firstItem="ssw-8e-eke" firstAttribute="top" secondItem="nv4-GF-mOH" secondAttribute="top" constant="50" id="92n-XF-qdP"/>
+                            <constraint firstItem="HKD-ZR-kuK" firstAttribute="leading" secondItem="nv4-GF-mOH" secondAttribute="leading" constant="20" id="Ana-xR-Qdx"/>
+                            <constraint firstItem="HKD-ZR-kuK" firstAttribute="centerX" secondItem="uLv-dN-JhX" secondAttribute="centerX" id="CxJ-N2-ktI"/>
+                            <constraint firstItem="ssw-8e-eke" firstAttribute="centerX" secondItem="uLv-dN-JhX" secondAttribute="centerX" id="NP5-Ez-Mp3"/>
+                            <constraint firstItem="HKD-ZR-kuK" firstAttribute="top" secondItem="ssw-8e-eke" secondAttribute="bottom" constant="8" symbolic="YES" id="bXK-uV-i6q"/>
+                            <constraint firstItem="ssw-8e-eke" firstAttribute="width" secondItem="HKD-ZR-kuK" secondAttribute="width" multiplier="1.21667" id="m7W-aC-P8c"/>
+                            <constraint firstItem="nv4-GF-mOH" firstAttribute="trailing" secondItem="HKD-ZR-kuK" secondAttribute="trailing" constant="20" id="vpQ-Yc-4C5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUE-2P-8VX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920" y="43"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ee6-bA-qr7">
+            <objects>
+                <viewController id="wwQ-eb-kFO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gKG-Wd-hks">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="We8-k7-Q0h" customClass="BorderedView" customModule="benzin" customModuleProvider="target">
+                                <rect key="frame" x="20" y="137" width="374" height="374"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="We8-k7-Q0h" secondAttribute="height" multiplier="1:1" id="jQ3-Bp-bv9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemOrangeColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройте ваше будущее изображение" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejy-uL-N8n">
+                                <rect key="frame" x="64.5" y="94" width="285.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dN4-9g-fh9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ejy-uL-N8n" firstAttribute="top" secondItem="dN4-9g-fh9" secondAttribute="top" constant="50" id="4yh-Nj-6Qu"/>
+                            <constraint firstItem="Ejy-uL-N8n" firstAttribute="width" secondItem="We8-k7-Q0h" secondAttribute="width" multiplier="0.763369" id="7Mf-Gz-Umh"/>
+                            <constraint firstItem="Ejy-uL-N8n" firstAttribute="centerX" secondItem="gKG-Wd-hks" secondAttribute="centerX" id="M9A-8l-fza"/>
+                            <constraint firstItem="We8-k7-Q0h" firstAttribute="leading" secondItem="dN4-9g-fh9" secondAttribute="leading" constant="20" id="YuR-o2-Jpt"/>
+                            <constraint firstItem="dN4-9g-fh9" firstAttribute="trailing" secondItem="We8-k7-Q0h" secondAttribute="trailing" constant="20" id="g6u-cD-azU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omf-sP-c2A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="43"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="mfZ-xG-Rzr">
+            <size key="intrinsicContentSize" width="173" height="30"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Photo" width="195" height="196"/>
         <systemColor name="systemBackgroundColor">

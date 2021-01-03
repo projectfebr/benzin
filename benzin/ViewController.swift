@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     }
     private let urlString = "https://api.benzin.io/v1/removeBackground"
     
+    @IBOutlet weak var responseLabel: UILabel!
     @IBOutlet weak var chooseImageButton: UIButton! {
         didSet {
             chooseImageButton.layer.cornerRadius = 7.0
@@ -39,6 +40,13 @@ class ViewController: UIViewController {
             deleteBackgroundButton.clipsToBounds = true
         }
     }
+    @IBOutlet weak var deleteBackgroundButton2: UIButton! {
+        didSet {
+            deleteBackgroundButton2.layer.cornerRadius = 7.0
+            deleteBackgroundButton2.clipsToBounds = true
+        }
+    }
+    
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -52,6 +60,15 @@ class ViewController: UIViewController {
         }
         mkhj = removeBackgroundRequest(imageData: imageData!)
     }
+    
+    @IBAction func deleteBackgroundRemoveBG() {
+        guard imageData != nil else {
+            return
+        }
+        mkhj = removeBackground(imageData: imageData!)
+    }
+    
+    
     @IBAction func chooseImage() {
         //        let cameraIcon = #imageLiteral(resourceName: "camera")  // image literal
         //        let imageIcon = #imageLiteral(resourceName: "photo")
@@ -82,13 +99,9 @@ class ViewController: UIViewController {
         
         imageView.image = UIImage(data: imageData)
 
-        
-        var multipart = MultipartFormData()
-        multipart.append(imageData, withName: "image_file") // изображение в формате Data
         let header = HTTPHeader(name: "X-Api-Key", value: key) // заголовок запроса
         let headers = HTTPHeaders([header])
 
-        
         AF.upload(
             multipartFormData: { multipartFormData in
                 multipartFormData.append(self.imageView.image!.jpegData(compressionQuality: 0.5)!, withName: "image_file" , fileName: "1", mimeType: "1")
@@ -97,14 +110,33 @@ class ViewController: UIViewController {
             to: "https://api.benzin.io/v1/removeBackground", method: .post , headers: headers)
             .response { resp in
                 debugPrint(resp)
-                
                 self.imageView.image = UIImage(data: resp.data!)
-
-
-        }
+                self.responseLabel.text = resp.data?.description
+       }
         
         return Data()
     }
+    
+    private func removeBackground(imageData: Data) -> Data {
+        
+        imageView.image = UIImage(data: imageData)
+
+        let header = HTTPHeader(name: "X-Api-Key", value: "KBCDYxcCEiaA6Tq8YwWFgn1K") // заголовок запроса
+        let headers = HTTPHeaders([header])
+
+        AF.upload(
+            multipartFormData: { multipartFormData in
+                multipartFormData.append(self.imageView.image!.jpegData(compressionQuality: 0.5)!, withName: "image_file" , fileName: "1", mimeType: "1")
+
+        },
+            to: "https://api.remove.bg/v1.0/removebg", method: .post , headers: headers)
+            .response { resp in
+                debugPrint(resp)
+                self.imageView.image = UIImage(data: resp.data!)
+        }
+        return Data()
+    }
+    
 }
 
 extension ViewController: UINavigationControllerDelegate {
